@@ -1,19 +1,15 @@
 package com.rosscrawford.mpdtrafficscotland;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
 
 /**
  * @author : Ross Crawford
@@ -24,34 +20,40 @@ import androidx.fragment.app.Fragment;
  **/
 public class RssFeed extends AsyncTask<String, Integer, Void>
 {
-    String input;
-    String result;
-    URL url;
-    URLConnection connection;
-    BufferedReader reader;
+    @SuppressLint("StaticFieldLeak")
+    private MainActivity activity;
 
     public RssFeed()
     {
         // empty constructor
     }
 
+    RssFeed(MainActivity activity)
+    {
+        // empty constructor
+        this.activity = activity;
+    }
+
     @Override
     protected Void doInBackground(String... strings)
     {
-        Log.d("Test", "Executing... " + strings[0]);
-        result = "";
+        StringBuilder result = new StringBuilder();
         try
         {
-            url = new URL(strings[0]);
-            Log.d("Test", "URL : " + url);
-            connection = url.openConnection();
-            reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            URL url = new URL(strings[0]);
+            URLConnection connection = url.openConnection();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
+            String input;
             while ((input = reader.readLine()) != null)
             {
-               result = result + input;
+               result.append(input);
             }
             reader.close();
+            TrafficApplication.itemsString = result.toString();
+            XmlParser xmlParser = new XmlParser();
+            xmlParser.parseData(TrafficApplication.itemsString);
+            Log.d("Test", TrafficApplication.items.size() + "");
         }
         catch (IOException e)
         {
@@ -64,6 +66,7 @@ public class RssFeed extends AsyncTask<String, Integer, Void>
     protected void onPreExecute()
     {
         super.onPreExecute();
+        activity.loading(true);
         Log.d("Test", "Execution started");
     }
 
@@ -71,7 +74,8 @@ public class RssFeed extends AsyncTask<String, Integer, Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
-        Log.d("Test", "Execution complete " + result);
+        activity.loading(false);
+        Log.d("Test", "Execution complete " + TrafficApplication.itemsString);
     }
 
     @Override
