@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         //        timer.cancel();
         //    }
         //}, 5000);
-
+        RssFeed rss = new RssFeed();
+        rss.execute(TrafficApplication.currentRoadworksUrl);
 
     }
 

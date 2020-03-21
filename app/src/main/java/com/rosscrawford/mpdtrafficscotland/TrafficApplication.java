@@ -18,5 +18,6 @@ public class TrafficApplication extends Application {
     public static final String plannedRoadworksUrl = "https://trafficscotland.org/rss/feeds/plannedroadworks.aspx";
 
     public static ArrayList<Item> items;
+    public static String itemsString;
 
 }
