@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MPD Traffic Scotland</string>
+    <string name="current_incidents">Current Incidents</string>
+    <string name="current_incidents_desc">Current incidents on the road network e.g. accidents</string>
+    <string name="view">view</string>
+    <string name="current_roadworks">Current Roadworks</string>
+    <string name="current_roadworks_desc">Roadworks currently being undertaken on the road network</string>
+    <string name="planned_roadworks">Planned Roadworks</string>
+    <string name="planned_roadworks_desc">Future planned roadworks on the road network</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading…</string>
+</resources>
