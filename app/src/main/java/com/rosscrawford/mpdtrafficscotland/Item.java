@@ -1,5 +1,6 @@
 package com.rosscrawford.mpdtrafficscotland;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 /**
@@ -9,7 +10,7 @@ import java.util.Calendar;
  * @module : Mobile Platform Development
  * @created : 20/03/2020
  **/
-public class Item {
+public class Item implements Serializable {
 
     private String title, description, published, geo;
     private double[] latLng;

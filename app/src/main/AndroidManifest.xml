@@ -12,6 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ItemOverview">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ItemList" />
+        </activity>
         <activity android:name=".ItemList">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

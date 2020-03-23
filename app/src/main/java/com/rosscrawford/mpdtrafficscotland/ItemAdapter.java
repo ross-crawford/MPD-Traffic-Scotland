@@ -1,13 +1,17 @@
 package com.rosscrawford.mpdtrafficscotland;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,32 +24,60 @@ import androidx.recyclerview.widget.RecyclerView;
  * @created : 21/03/2020
  **/
 
-public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>
+// TODO: 23/03/2020
+//    current roadworks break when filtering - nullpointer?
+//    index when filtered does not match index in TrafficApplication list
+
+public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> implements Filterable
 {
     private ArrayList<Item> items;
-    private Context context;
+    private ArrayList<Item> itemsFiltered;
+    ItemSelected activity;
 
-    ItemAdapter(Context context, ArrayList<Item> items)
+    public interface ItemSelected
+    {
+        void onItemSelected(int index);
+    }
+
+    public ItemAdapter(Context context, ArrayList<Item> items)
     {
         this.items = items;
-        this.context = context;
+        this.itemsFiltered = items;
+        this.activity = (ItemSelected) context;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder
+    {
+        TextView tvTitle;
+
+        public ViewHolder(@NonNull View itemView)
+        {
+            super(itemView);
+            tvTitle = itemView.findViewById(R.id.tvTitle);
+
+            itemView.setOnClickListener(new View.OnClickListener()
+            {
+                @Override
+                public void onClick(View v) {
+                    activity.onItemSelected(items.indexOf(v.getTag()));
+                }
+            });
+        }
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    public ItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
-        View view = LayoutInflater.from(context).inflate(R.layout.traffic_item_row, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.traffic_item_row, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull ItemAdapter.ViewHolder holder, int position)
     {
-        Item current = items.get(position);
-        holder.title.setText(current.getTitle());
-        holder.description.setText(current.getDescription());
-        holder.published.setText(current.getPublished());
+        holder.itemView.setTag(items.get(position));
+        holder.tvTitle.setText(items.get(position).getTitle());
     }
 
     @Override
@@ -54,15 +86,41 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>
         return items.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder
-    {
-        TextView title, description, published;
+    @Override
+    public Filter getFilter() {
+        Filter filter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults filterResults = new FilterResults();
+                if (constraint == null | constraint.length() == 0)
+                {
+                    filterResults.count = itemsFiltered.size();
+                    filterResults.values = itemsFiltered;
+                }
+                else
+                {
+                    String query = constraint.toString().toLowerCase();
+                    ArrayList<Item> resultsData = new ArrayList<>();
 
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            title = itemView.findViewById(R.id.tvTitle);
-            description = itemView.findViewById(R.id.tvDescription);
-            published = itemView.findViewById(R.id.tvPublished);
-        }
+                    for (Item item : itemsFiltered)
+                    {
+                        if (item.getTitle().toLowerCase().contains(query))
+                        {
+                            resultsData.add(item);
+                        }
+                    }
+                    filterResults.count = resultsData.size();
+                    filterResults.values = resultsData;
+                }
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                items = (ArrayList<Item>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+        return filter;
     }
 }
