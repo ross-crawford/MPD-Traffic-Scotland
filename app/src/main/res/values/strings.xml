@@ -7,8 +7,9 @@
     <string name="current_roadworks_desc">Roadworks currently being undertaken on the road network</string>
     <string name="planned_roadworks">Planned Roadworks</string>
     <string name="planned_roadworks_desc">Future planned roadworks on the road network</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loading">Loading…</string>
+    <string name="sample_publish_date">Sample Publish Date</string>
+    <string name="sample_card_description">Sample Card Description</string>
+    <string name="sample_card_title">Sample Card Title</string>
+    <string name="search">Search</string>
 </resources>

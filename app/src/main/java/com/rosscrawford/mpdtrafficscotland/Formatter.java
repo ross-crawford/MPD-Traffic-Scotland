@@ -8,6 +8,8 @@ import java.util.Calendar;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
+import static java.lang.Double.valueOf;
+
 /**
  * @author : Ross Crawford
  * @matriculation no. : S1821950
@@ -18,11 +20,10 @@ import java.util.concurrent.TimeUnit;
 public class Formatter {
 
     // convert geo values for map
-    public double[] getLatLng(String geo)
+    double[] getLatLng(String geo)
     {
         String[] latLngString = geo.split(" ");
-        double[] latLng = {Double.valueOf(latLngString[0]), Double.valueOf(latLngString[1])};
-        return latLng;
+        return new double[]{valueOf(latLngString[0]), valueOf(latLngString[1])};
     }
 
     // extract Calendar object from date string in description
@@ -60,10 +61,9 @@ public class Formatter {
     }
 
     // convert xml line breaks to \n
-    public String convertLineBreaks(String text)
+    String convertLineBreaks(String text)
     {
-        String converted = text.replaceAll("<br />", "\n");
-        return converted;
+        return text.replaceAll("<br />", "\n");
     }
 
 }
