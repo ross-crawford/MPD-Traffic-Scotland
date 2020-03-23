@@ -3,7 +3,6 @@ package com.rosscrawford.mpdtrafficscotland;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity
         RssFeed rss = new RssFeed(this);
         rss.execute(TrafficApplication.currentIncidentsUrl);
         TrafficApplication.feedName = "Current Incidents";
-        startActivity(new Intent(MainActivity.this, ItemList.class));
     }
 
     public void openCurrentRoadworks(View view)
@@ -45,7 +43,6 @@ public class MainActivity extends AppCompatActivity
         RssFeed rss = new RssFeed(this);
         rss.execute(TrafficApplication.currentRoadworksUrl);
         TrafficApplication.feedName = "Current Roadworks";
-        startActivity(new Intent(MainActivity.this, ItemList.class));
     }
 
     public void openPlannedRoadworks(View view)
@@ -53,7 +50,6 @@ public class MainActivity extends AppCompatActivity
         RssFeed rss = new RssFeed(this);
         rss.execute(TrafficApplication.plannedRoadworksUrl);
         TrafficApplication.feedName = "Planned Roadworks";
-        startActivity(new Intent(MainActivity.this, ItemList.class));
     }
 
     public void loading(final boolean show)

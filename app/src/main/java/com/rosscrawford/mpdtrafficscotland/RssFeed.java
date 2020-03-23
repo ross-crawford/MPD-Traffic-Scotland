@@ -1,6 +1,7 @@
 package com.rosscrawford.mpdtrafficscotland;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -10,7 +11,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 
-
 /**
  * @author : Ross Crawford
  * @matriculation no. : S1821950
@@ -18,15 +18,22 @@ import java.net.URLConnection;
  * @module : Mobile Platform Development
  * @created : 21/03/2020
  **/
+
 public class RssFeed extends AsyncTask<String, Integer, Void>
 {
     @SuppressLint("StaticFieldLeak")
     private MainActivity activity;
+    //private Context context;
 
     public RssFeed()
     {
         // empty constructor
     }
+
+    //public RssFeed(Context context)
+    //{
+    //    this.context = context.getApplicationContext();
+    //}
 
     RssFeed(MainActivity activity)
     {
@@ -54,6 +61,11 @@ public class RssFeed extends AsyncTask<String, Integer, Void>
             XmlParser xmlParser = new XmlParser();
             xmlParser.parseData(TrafficApplication.itemsString);
             Log.d("Test", TrafficApplication.items.size() + "");
+            if (!TrafficApplication.items.isEmpty())
+            {
+                Log.d("Test", TrafficApplication.items.get(0).getPublished());
+            }
+
         }
         catch (IOException e)
         {
@@ -74,8 +86,11 @@ public class RssFeed extends AsyncTask<String, Integer, Void>
     protected void onPostExecute(Void aVoid)
     {
         super.onPostExecute(aVoid);
-        activity.loading(false);
         Log.d("Test", "Execution complete " + TrafficApplication.itemsString);
+        Intent intent = new Intent();
+        intent.setClass(activity.getApplicationContext(), ItemList.class);
+        activity.startActivity(intent);
+        activity.loading(false);
     }
 
     @Override

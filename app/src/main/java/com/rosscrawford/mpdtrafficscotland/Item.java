@@ -12,6 +12,7 @@ import java.util.Calendar;
 public class Item {
 
     private String title, description, published, geo;
+    private double[] latLng;
     private Calendar start, end;
 
     public Item() {}
@@ -46,6 +47,14 @@ public class Item {
 
     public void setGeo(String geo) {
         this.geo = geo;
+    }
+
+    public double[] getLatLng() {
+        return latLng;
+    }
+
+    public void setLatLng(double[] latLng) {
+        this.latLng = latLng;
     }
 
     public Calendar getStart() {

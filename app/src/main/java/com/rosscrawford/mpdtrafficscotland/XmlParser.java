@@ -23,10 +23,12 @@ public class XmlParser
     private ArrayList<Item> items;
     private Item item;
     private String text;
+    private Formatter formatter;
 
     public XmlParser()
     {
         items = new ArrayList<>();
+        formatter = new Formatter();
     }
 
 
@@ -54,7 +56,6 @@ public class XmlParser
 
                     case XmlPullParser.TEXT:
                         text = parser.getText();
-                        //Log.d("Test", text);
                         break;
 
                     case XmlPullParser.END_TAG:
@@ -68,7 +69,13 @@ public class XmlParser
                         }
                         else if (tag.equalsIgnoreCase("description"))
                         {
-                            item.setDescription(text);
+                            String formatted = formatter.convertLineBreaks(text);
+                            int startIndexFirst = formatted.indexOf("Start Date: ");
+                            int startIndexLast = formatted.indexOf(" - 00:00");
+                            //String startDate = formatted.substring(startIndexFirst, startIndexLast);
+                            //String startDateIndex = formatted.substring(formatted.indexOf("Start Date: "), formatted.indexOf(':'));
+                            //Log.d("Test", startIndexFirst + " " + startIndexLast);
+                            item.setDescription(formatted);
                         }
                         else if (tag.equalsIgnoreCase("pubDate"))
                         {
@@ -76,7 +83,10 @@ public class XmlParser
                         }
                         else if (tag.equalsIgnoreCase("point"))
                         {
+                            double[] latLng = formatter.getLatLng(text);
+                            //Log.d("Test", "Latitude: " + latLng[0] + " Longitude: " + latLng[1]);
                             item.setGeo(text);
+                            item.setLatLng(latLng);
                         }
                         break;
 
