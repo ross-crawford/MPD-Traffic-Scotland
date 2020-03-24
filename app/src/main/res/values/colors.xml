@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     author : Ross Crawford
+     matriculation no. : S1821950
+     university : Glasgow Caledonian University
+     module : Mobile Platform Development
+-->
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>

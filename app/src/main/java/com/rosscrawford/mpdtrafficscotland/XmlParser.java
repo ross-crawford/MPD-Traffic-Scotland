@@ -1,7 +1,5 @@
 package com.rosscrawford.mpdtrafficscotland;
 
-import android.util.Log;
-
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -17,9 +15,9 @@ import java.util.ArrayList;
  * @module : Mobile Platform Development
  * @created : 21/03/2020
  **/
+
 public class XmlParser
 {
-
     private ArrayList<Item> items;
     private Item item;
     private String text;
@@ -30,7 +28,6 @@ public class XmlParser
         items = new ArrayList<>();
         formatter = new Formatter();
     }
-
 
     public void parseData(String data)
     {
@@ -46,7 +43,8 @@ public class XmlParser
             while (eventType != XmlPullParser.END_DOCUMENT)
             {
                 String tag = parser.getName();
-                switch (eventType) {
+                switch (eventType)
+                {
                     case XmlPullParser.START_TAG:
                         if (tag.equalsIgnoreCase("item"))
                         {
@@ -90,7 +88,6 @@ public class XmlParser
                         else if (tag.equalsIgnoreCase("point"))
                         {
                             double[] latLng = formatter.getLatLng(text);
-                            //Log.d("Test", "Latitude: " + latLng[0] + " Longitude: " + latLng[1]);
                             item.setGeo(text);
                             item.setLatLng(latLng);
                         }

@@ -16,7 +16,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class ItemOverview extends AppCompatActivity implements OnMapReadyCallback {
+public class ItemOverview extends AppCompatActivity implements OnMapReadyCallback
+{
 
     private ActionBar actionBar;
     private TextView tvTitle, tvDescription, tvPublished;
@@ -28,14 +29,16 @@ public class ItemOverview extends AppCompatActivity implements OnMapReadyCallbac
     private double[] latLng;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_overview);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
         actionBar = getSupportActionBar();
-        if (actionBar != null) {
+        if (actionBar != null)
+        {
             actionBar.setSubtitle("Details");
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
@@ -57,7 +60,8 @@ public class ItemOverview extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(GoogleMap googleMap)
+    {
         map = googleMap;
         latLng = item.getLatLng();
         mapSettings = map.getUiSettings();

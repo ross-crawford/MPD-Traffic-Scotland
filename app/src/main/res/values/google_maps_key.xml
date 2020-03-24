@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
      author : Ross Crawford
      matriculation no. : S1821950
      university : Glasgow Caledonian University
      module : Mobile Platform Development
 -->
-
 <resources>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBIasGEa5QjAhAtLmHUNjNXC7dLiUV0ivY</string>
 </resources>

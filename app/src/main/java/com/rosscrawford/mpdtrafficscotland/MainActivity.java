@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity
 
     public void openCurrentIncidents(View view)
     {
-
         RssFeed rss = new RssFeed(this);
         rss.execute(TrafficApplication.currentIncidentsUrl);
         TrafficApplication.feedName = "Current Incidents";

@@ -24,23 +24,12 @@ import androidx.recyclerview.widget.RecyclerView;
  * @created : 21/03/2020
  **/
 
-// TODO: 23/03/2020
-//    current roadworks break when filtering - nullpointer?
-//    index when filtered does not match index in TrafficApplication list
-
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> implements Filterable
 {
     private ArrayList<Item> items;
     private ArrayList<Item> itemsFiltered;
     private ItemSelected activity;
 
-    // not working because of filter - index not same as in original list
-    //public interface ItemSelected
-    //{
-    //    void onItemSelected(int index);
-    //}
-
-    // try getting the object instead
     public interface ItemSelected
     {
         void itemSelected(Item item);
@@ -50,7 +39,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     {
         this.items = items;
         this.itemsFiltered = items;
-        //this.activity = (ItemSelected) context;
         this.activity = activity;
     }
 
@@ -67,8 +55,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
             {
                 @Override
                 public void onClick(View v) {
-                    // not working
-                    //activity.onItemSelected(items.indexOf(v.getTag()));
                     activity.itemSelected(items.get(getAdapterPosition()));
                 }
             });
@@ -97,10 +83,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     }
 
     @Override
-    public Filter getFilter() {
-        Filter filter = new Filter() {
+    public Filter getFilter()
+    {
+        Filter filter = new Filter()
+        {
             @Override
-            protected FilterResults performFiltering(CharSequence constraint) {
+            protected FilterResults performFiltering(CharSequence constraint)
+            {
                 FilterResults filterResults = new FilterResults();
                 if (constraint == null | constraint.length() == 0)
                 {
@@ -126,7 +115,8 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
             }
 
             @Override
-            protected void publishResults(CharSequence constraint, FilterResults results) {
+            protected void publishResults(CharSequence constraint, FilterResults results)
+            {
                 items = (ArrayList<Item>) results.values;
                 notifyDataSetChanged();
             }

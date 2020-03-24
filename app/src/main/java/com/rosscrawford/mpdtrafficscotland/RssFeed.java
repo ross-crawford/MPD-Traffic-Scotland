@@ -23,21 +23,14 @@ public class RssFeed extends AsyncTask<String, Integer, Void>
 {
     @SuppressLint("StaticFieldLeak")
     private MainActivity activity;
-    //private Context context;
 
     public RssFeed()
     {
         // empty constructor
     }
 
-    //public RssFeed(Context context)
-    //{
-    //    this.context = context.getApplicationContext();
-    //}
-
     RssFeed(MainActivity activity)
     {
-        // empty constructor
         this.activity = activity;
     }
 

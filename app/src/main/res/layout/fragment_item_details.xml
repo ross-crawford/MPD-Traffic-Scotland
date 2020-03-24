@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     author : Ross Crawford
+     matriculation no. : S1821950
+     university : Glasgow Caledonian University
+     module : Mobile Platform Development
+-->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -32,4 +38,5 @@
         android:text="@string/sample_publish_date"
         android:textColor="@color/colorTextSecondary"
         android:textSize="12sp" />
+
 </LinearLayout>

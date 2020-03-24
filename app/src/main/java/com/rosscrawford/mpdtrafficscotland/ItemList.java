@@ -54,7 +54,8 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
     //    startActivity(new Intent(ItemList.this, ItemOverview.class).putExtra("data", items.get(index)));
     //}
     @Override
-    public void itemSelected(Item item) {
+    public void itemSelected(Item item)
+    {
         startActivity(new Intent(ItemList.this, ItemOverview.class).putExtra("data", item));
     }
 
@@ -65,14 +66,17 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setMaxWidth(Integer.MAX_VALUE);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
+        {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+            public boolean onQueryTextSubmit(String query)
+            {
                 return false;
             }
 
             @Override
-            public boolean onQueryTextChange(String newText) {
+            public boolean onQueryTextChange(String newText)
+            {
                 adapter.getFilter().filter(newText);
                 return true;
             }

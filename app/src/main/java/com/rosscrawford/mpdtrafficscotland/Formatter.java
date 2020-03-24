@@ -17,7 +17,9 @@ import static java.lang.Double.valueOf;
  * @module : Mobile Platform Development
  * @created : 20/03/2020
  **/
-public class Formatter {
+
+public class Formatter
+{
 
     // convert geo values for map
     double[] getLatLng(String geo)

@@ -11,7 +11,8 @@ import java.util.ArrayList;
  * @module : Mobile Platform Development
  * @created : 20/03/2020
  **/
-public class TrafficApplication extends Application {
+public class TrafficApplication extends Application
+{
 
     public static final String currentIncidentsUrl = "https://trafficscotland.org/rss/feeds/currentincidents.aspx";
     public static final String currentRoadworksUrl = "https://trafficscotland.org/rss/feeds/roadworks.aspx";
