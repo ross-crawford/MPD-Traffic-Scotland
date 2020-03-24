@@ -1,17 +1,15 @@
 package com.rosscrawford.mpdtrafficscotland;
 
-import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,7 +33,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
         void itemSelected(Item item);
     }
 
-    public ItemAdapter(Context context, ArrayList<Item> items, ItemSelected activity)
+    public ItemAdapter(ArrayList<Item> items, ItemSelected activity)
     {
         this.items = items;
         this.itemsFiltered = items;
@@ -45,11 +43,13 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     public class ViewHolder extends RecyclerView.ViewHolder
     {
         TextView tvTitle;
+        ImageView ivRating;
 
         public ViewHolder(@NonNull View itemView)
         {
             super(itemView);
             tvTitle = itemView.findViewById(R.id.tvTitle);
+            ivRating = itemView.findViewById(R.id.ivRating);
 
             itemView.setOnClickListener(new View.OnClickListener()
             {
@@ -74,6 +74,20 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     {
         holder.itemView.setTag(items.get(position));
         holder.tvTitle.setText(items.get(position).getTitle());
+        switch (items.get(position).getRating())
+        {
+            case 1:
+                holder.ivRating.setImageResource(R.drawable.rating_low);
+                break;
+            case 2:
+                holder.ivRating.setImageResource(R.drawable.rating_med);
+                break;
+            case 3:
+                holder.ivRating.setImageResource(R.drawable.rating_high);
+                break;
+            default:
+                holder.ivRating.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -85,7 +99,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
     @Override
     public Filter getFilter()
     {
-        Filter filter = new Filter()
+        return new Filter()
         {
             @Override
             protected FilterResults performFiltering(CharSequence constraint)
@@ -121,6 +135,5 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
                 notifyDataSetChanged();
             }
         };
-        return filter;
     }
 }

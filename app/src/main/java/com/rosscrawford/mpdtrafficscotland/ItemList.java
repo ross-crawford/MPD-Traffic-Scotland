@@ -42,17 +42,11 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
 
         items = new ArrayList<>(TrafficApplication.items);
 
-        adapter = new ItemAdapter(this, items, this);
+        adapter = new ItemAdapter(items, this);
 
         recyclerView.setAdapter(adapter);
     }
 
-    // not working
-    //@Override
-    //public void onItemSelected(int index)
-    //{
-    //    startActivity(new Intent(ItemList.this, ItemOverview.class).putExtra("data", items.get(index)));
-    //}
     @Override
     public void itemSelected(Item item)
     {

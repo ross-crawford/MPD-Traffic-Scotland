@@ -18,7 +18,7 @@ import static java.lang.Double.valueOf;
  * @created : 20/03/2020
  **/
 
-public class Formatter
+class Formatter
 {
 
     // convert geo values for map
@@ -26,6 +26,30 @@ public class Formatter
     {
         String[] latLngString = geo.split(" ");
         return new double[]{valueOf(latLngString[0]), valueOf(latLngString[1])};
+    }
+
+    public String[] getDateStrings(String text)
+    {
+        if (!text.contains("Start Date: ") || !text.contains("End Date: "))
+        {
+            return null;
+        }
+        else
+        {
+            String startDateIndex = text.substring(text.indexOf("Start Date: "), text.indexOf(':'));
+            String startDateString = text.substring(startDateIndex.length() + 2, text.indexOf(" - 00:00"));
+
+            // remove start date to parse end date
+            text = text.substring(text.indexOf('>') + 1);
+
+            String endDateIndex = text.substring(text.indexOf("End Date: "), text.indexOf(':'));
+            String endDateString = text.substring(endDateIndex.length() + 2, text.indexOf(" - 00:00"));
+
+            String[] datesArray = new String[2];
+            datesArray[0] = startDateString;
+            datesArray[1] = endDateString;
+            return datesArray;
+        }
     }
 
     // extract Calendar object from date string in description
@@ -62,10 +86,16 @@ public class Formatter
         }
     }
 
-    // convert xml line breaks to \n
+    // convert xml line breaks to \n and line break for roadworks information
     String convertLineBreaks(String text)
     {
-        return text.replaceAll("<br />", "\n");
+        text = text.replaceAll("<br />", "\n");
+        text = text.replace("Location : ", "\nLocation: ");
+        text = text.replace("Traffic Management:", "\nTraffic Management: ");
+        text = text.replace("Diversion Information:", "\nDiversion Information: ");
+        text = text.replace("Lane Closures :", "\nLane Closures: ");
+        text = text.replace("Reason :", "\nReason: ");
+        return text;
     }
 
 }

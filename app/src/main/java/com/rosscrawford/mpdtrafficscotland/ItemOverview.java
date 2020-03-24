@@ -55,7 +55,7 @@ public class ItemOverview extends AppCompatActivity implements OnMapReadyCallbac
 
             tvTitle.setText(item.getTitle());
             tvDescription.setText(item.getDescription());
-            tvPublished.setText(item.getPublished());
+            tvPublished.setText(String.format("%s%s", getString(R.string.published_label), item.getPublished().substring(0, item.getPublished().length() - 13)));
         }
     }
 

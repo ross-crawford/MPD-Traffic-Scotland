@@ -18,4 +18,6 @@
     <string name="sample_card_title">Sample Card Title</string>
     <string name="search">Search</string>
     <string name="sample_publish_date">Sample Publish Date</string>
+    <string name="rating">rating</string>
+    <string name="published_label">Published on&#160;</string>
 </resources>

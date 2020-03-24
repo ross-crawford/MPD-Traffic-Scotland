@@ -15,6 +15,7 @@ public class Item implements Serializable
 {
 
     private String title, description, published, geo;
+    private int rating;
     private double[] latLng;
     private Calendar start, end;
 
@@ -58,6 +59,16 @@ public class Item implements Serializable
     public void setGeo(String geo)
     {
         this.geo = geo;
+    }
+
+    public int getRating()
+    {
+        return rating;
+    }
+
+    public void setRating(int rating)
+    {
+        this.rating = rating;
     }
 
     public double[] getLatLng()

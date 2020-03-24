@@ -14,4 +14,7 @@
     <color name="colorTextSecondary">#757575</color>
     <color name="colorTextWhite">#FFFFFF</color>
     <color name="colorDivider">#BDBDBD</color>
+    <color name="colorRatingLow">#4CAF50</color>
+    <color name="colorRatingMed">#FFC107</color>
+    <color name="colorRatingHigh">#F44336</color>
 </resources>
