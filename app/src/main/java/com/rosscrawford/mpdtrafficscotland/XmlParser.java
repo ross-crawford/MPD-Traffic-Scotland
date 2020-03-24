@@ -61,11 +61,17 @@ public class XmlParser
                     case XmlPullParser.END_TAG:
                         if (tag.equalsIgnoreCase("item"))
                         {
-                            items.add(item);
+                            // negating items which don't have a title in the RSS feed - breaking the filter
+                            if (!(item.getTitle() == null))
+                            {
+                                items.add(item);
+                            }
                         }
+
                         else if (tag.equalsIgnoreCase("title"))
                         {
                             item.setTitle(text);
+
                         }
                         else if (tag.equalsIgnoreCase("description"))
                         {

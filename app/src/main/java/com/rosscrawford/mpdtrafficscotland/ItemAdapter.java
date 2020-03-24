@@ -32,18 +32,26 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
 {
     private ArrayList<Item> items;
     private ArrayList<Item> itemsFiltered;
-    ItemSelected activity;
+    private ItemSelected activity;
 
+    // not working because of filter - index not same as in original list
+    //public interface ItemSelected
+    //{
+    //    void onItemSelected(int index);
+    //}
+
+    // try getting the object instead
     public interface ItemSelected
     {
-        void onItemSelected(int index);
+        void itemSelected(Item item);
     }
 
-    public ItemAdapter(Context context, ArrayList<Item> items)
+    public ItemAdapter(Context context, ArrayList<Item> items, ItemSelected activity)
     {
         this.items = items;
         this.itemsFiltered = items;
-        this.activity = (ItemSelected) context;
+        //this.activity = (ItemSelected) context;
+        this.activity = activity;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder
@@ -59,7 +67,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
             {
                 @Override
                 public void onClick(View v) {
-                    activity.onItemSelected(items.indexOf(v.getTag()));
+                    // not working
+                    //activity.onItemSelected(items.indexOf(v.getTag()));
+                    activity.itemSelected(items.get(getAdapterPosition()));
                 }
             });
         }
