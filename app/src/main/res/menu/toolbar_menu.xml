@@ -16,10 +16,10 @@
         app:showAsAction="always|collapseActionView"
         app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
-<!--    <item-->
-<!--        android:id="@+id/action_date"-->
-<!--        android:title="Date"-->
-<!--        android:icon="@drawable/calendar"-->
-<!--        app:showAsAction="always|collapseActionView" />-->
+    <item
+        android:id="@+id/action_date"
+        android:title="@string/date"
+        android:icon="@drawable/calendar"
+        app:showAsAction="always|collapseActionView" />
 
 </menu>

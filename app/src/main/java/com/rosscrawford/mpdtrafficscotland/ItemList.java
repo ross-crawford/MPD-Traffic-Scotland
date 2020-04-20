@@ -7,14 +7,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 /**
  * @author : Ross Crawford
@@ -85,8 +89,8 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
     public boolean onCreateOptionsMenu(Menu menu)
     {
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-        MenuItem menuItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) menuItem.getActionView();
+        MenuItem menuItemSearch = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) menuItemSearch.getActionView();
 
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
@@ -115,6 +119,28 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
 
         if (id == R.id.action_search)
         {
+            return true;
+        }
+        if (id == R.id.action_date)
+        {
+            // Get Current Date
+            int year, month, day;
+            final Calendar c = Calendar.getInstance();
+            year = c.get(Calendar.YEAR);
+            month = c.get(Calendar.MONTH);
+            day = c.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    // this is where we would filter the recyclerview list to display a filtered result set based on the date input matching the Calendar dates
+                    // need to first store the date selected
+                    // then query against the list being shown
+                    // would need to determine if the selected date is greater than start date or less than end date
+                    // would need to disable this feature in the current incidents as no dates shown on there
+                    Toast.makeText(ItemList.this, dayOfMonth + "/" + month + "/" + year, Toast.LENGTH_SHORT).show();
+                }
+            }, year, month, day);
+            datePickerDialog.show();
             return true;
         }
         return super.onOptionsItemSelected(item);

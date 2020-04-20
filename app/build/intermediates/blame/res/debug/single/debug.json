@@ -8,12 +8,12 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-hdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_standard_color_18.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_list_longpressed_holo.9.png"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_googleg_standard_color_18.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-mdpi-v4\\googleg_standard_color_18.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_search_view.xml.flat",
@@ -144,28 +144,28 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\raw_style_json.json.flat",
-        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\raw\\style_json.json"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_common_google_signin_btn_icon_light_normal_background.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_black_36dp.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xhdpi-v4\\abc_ic_star_black_36dp.png"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\raw_style_json.json.flat",
+        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\raw\\style_json.json"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_btn_colored_material.xml.flat",
@@ -188,12 +188,12 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxhdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
@@ -300,12 +300,12 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout-land_activity_item_list.xml.flat",
         "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\layout-land\\activity_item_list.xml"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",
@@ -344,12 +344,12 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\btn_radio_to_on_mtrl_ring_outer_animation.xml"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -560,16 +560,16 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_checkbox_to_unchecked_box_inner_merged_animation.xml.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_close_item_material.xml.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\layout\\abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_btn_checkbox_to_unchecked_box_inner_merged_animation.xml.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\btn_checkbox_to_unchecked_box_inner_merged_animation.xml"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -584,28 +584,28 @@
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\77c2fc448e2bd0738fd67dce062b1efd\\play-services-base-17.0.0\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item_overview.xml.flat",
-        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\layout\\activity_item_overview.xml"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-xxxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_grow_fade_in_from_bottom.xml.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_item_overview.xml.flat",
+        "source": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\src\\main\\res\\layout\\activity_item_overview.xml"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-mdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
-        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
-        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
-    },
-    {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_go_search_api_material.xml.flat",
         "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_half_black_16dp.png.flat",
+        "source": "C:\\Users\\rcraw\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "F:\\MPD\\Projects\\MPDTrafficScotland\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_bottom.xml.flat",

@@ -852,6 +852,7 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_date
 id action_divider
 id action_image
 id action_menu_divider
@@ -1160,6 +1161,7 @@ string current_incidents
 string current_incidents_desc
 string current_roadworks
 string current_roadworks_desc
+string date
 string google_maps_key
 string happy_face
 string loading

@@ -89,9 +89,16 @@ public class FormatterTest
     @Test
     public void convertLineBreaks()
     {
-        String input = "Start Date: Thursday, 26 March 2020 - 00:00<br />End Date: Friday, 27 March 2020 - 00:00<br />Works: Gantry Works Traffic Management: Road Closure. Diversion Information: Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
+        String input = "Start Date: Thursday, 26 March 2020 - 00:00" +
+                "<br />End Date: Friday, 27 March 2020 - 00:00" +
+                "<br />Works: Gantry Works Traffic Management: Road Closure. " +
+                "Diversion Information: Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
         String output = formatter.convertLineBreaks(input);
-        String expected = "Start Date: Thursday, 26 March 2020 - 00:00\nEnd Date: Friday, 27 March 2020 - 00:00\nWorks: Gantry Works \nTraffic Management:  Road Closure. \nDiversion Information:  Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
+        String expected = "Start Date: Thursday, 26 March 2020 - 00:00" +
+                "\nEnd Date: Friday, 27 March 2020 - 00:00" +
+                "\nWorks: Gantry Works " +
+                "\nTraffic Management:  Road Closure. " +
+                "\nDiversion Information:  Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
 
         assertEquals(expected, output);
     }
