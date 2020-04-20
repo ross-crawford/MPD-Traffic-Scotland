@@ -9,29 +9,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landscapeList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".ItemList">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvList"
-        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="visible" />
-
-<!--    <fragment-->
-<!--        android:id="@+id/mapView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/rvList" />-->
+        android:visibility="visible"/>
 
     <LinearLayout
         android:id="@+id/noResults"
@@ -51,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginVertical="5dp"
-            app:srcCompat="@drawable/happy" />
+            app:srcCompat="@drawable/happy"
+            android:contentDescription="@string/happy_face"/>
 
         <TextView
             android:id="@+id/tvNoResults"

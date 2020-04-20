@@ -16,6 +16,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MapStyleOptions;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+/**
+ * @author : Ross Crawford
+ * @matriculation no. : S1821950
+ * @university : Glasgow Caledonian University
+ * @module : Mobile Platform Development
+ * @created : 21/03/2020
+ **/
+
 public class ItemOverview extends AppCompatActivity implements OnMapReadyCallback
 {
 
@@ -69,6 +77,6 @@ public class ItemOverview extends AppCompatActivity implements OnMapReadyCallbac
         map.setMapStyle(MapStyleOptions.loadRawResourceStyle(this, R.raw.style_json));
         LatLng position = new LatLng(latLng[0], latLng[1]);
         map.addMarker(new MarkerOptions().position(position).title(item.getTitle()).visible(true));
-        map.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 14));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 15));
     }
 }

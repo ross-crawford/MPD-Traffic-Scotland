@@ -14,9 +14,10 @@ import static org.junit.Assert.*;
  * @module : Mobile Platform Development
  * @created : 24/03/2020
  **/
+
 public class FormatterTest
 {
-    Formatter formatter = new Formatter();
+    private Formatter formatter = new Formatter();
 
     // working
     @Test
@@ -40,14 +41,15 @@ public class FormatterTest
         assertEquals(expected[1], output[1]);
     }
 
-    // not working
+    // working
     @Test
     public void getCalendarFromString()
     {
         String input = "Monday, 23 March 2020";
         Calendar expected = Calendar.getInstance();
-        expected.setTimeZone(TimeZone.getTimeZone("GMT"));
-        expected.set(2020, 3, 23, 0, 0, 0);
+        TimeZone tz = TimeZone.getTimeZone("GMT");
+        expected.set(2020, Calendar.MARCH, 23, 0, 0, 0);
+        expected.setTimeZone(tz);
         assertEquals(expected.getTime().toString(), formatter.getCalendarFromString(input).getTime().toString());
     }
 
@@ -89,7 +91,7 @@ public class FormatterTest
     {
         String input = "Start Date: Thursday, 26 March 2020 - 00:00<br />End Date: Friday, 27 March 2020 - 00:00<br />Works: Gantry Works Traffic Management: Road Closure. Diversion Information: Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
         String output = formatter.convertLineBreaks(input);
-        String expected = "Start Date: Thursday, 26 March 2020 - 00:00\nEnd Date: Friday, 27 March 2020 - 00:00\nWorks: Gantry Works \nTraffic Management: Road Closure. \nDiversion Information: Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
+        String expected = "Start Date: Thursday, 26 March 2020 - 00:00\nEnd Date: Friday, 27 March 2020 - 00:00\nWorks: Gantry Works \nTraffic Management:  Road Closure. \nDiversion Information:  Diversion will be Jct 2 SB On slip to Jct 1c Admiralty and return.";
 
         assertEquals(expected, output);
     }

@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Double.valueOf;
@@ -56,10 +57,12 @@ class Formatter
     public Calendar getCalendarFromString(String date)
     {
         Calendar calendar = Calendar.getInstance();
+        TimeZone tz = TimeZone.getTimeZone("GMT");
         String pattern = "EEEE, dd MMMM yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern, Locale.ENGLISH);
         try {
             calendar.setTime(simpleDateFormat.parse(date));
+            calendar.setTimeZone(tz);
         } catch (ParseException e) {
             Log.d("Test", "Error converting date String to date Calendar");
         }

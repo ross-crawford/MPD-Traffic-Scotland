@@ -20,4 +20,6 @@
     <string name="sample_publish_date">Sample Publish Date</string>
     <string name="rating">rating</string>
     <string name="published_label">Published on&#160;</string>
+    <string name="happy_face">happy face</string>
+    <string name="no_issues_here">No issues here</string>
 </resources>

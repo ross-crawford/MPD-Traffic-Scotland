@@ -11,7 +11,7 @@ import android.view.View;
  * @matriculation no. : S1821950
  * @university : Glasgow Caledonian University
  * @module : Mobile Platform Development
- * @created : 21/03/2020
+ * @created : 20/03/2020
  **/
 
 public class MainActivity extends AppCompatActivity

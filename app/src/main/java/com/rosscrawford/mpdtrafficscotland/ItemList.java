@@ -3,6 +3,7 @@ package com.rosscrawford.mpdtrafficscotland;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,14 +11,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
+
+/**
+ * @author : Ross Crawford
+ * @matriculation no. : S1821950
+ * @university : Glasgow Caledonian University
+ * @module : Mobile Platform Development
+ * @created : 21/03/2020
+ **/
 
 public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelected
 {
 
     ActionBar actionBar;
     RecyclerView recyclerView;
+    LinearLayout empty;
     ItemAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
 
@@ -35,12 +47,28 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
+        if (findViewById(R.id.landscapeList) != null)
+        {
+            layoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        }
+        else
+        {
+            layoutManager = new LinearLayoutManager(this);
+        }
+
         recyclerView = findViewById(R.id.rvList);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         items = new ArrayList<>(TrafficApplication.items);
+        empty = findViewById(R.id.noResults);
+
+        // message display for no results - needs amending to work in the filter too
+        if (items.isEmpty())
+        {
+            recyclerView.setVisibility(View.GONE);
+            empty.setVisibility(View.VISIBLE);
+        }
 
         adapter = new ItemAdapter(items, this);
 
@@ -59,6 +87,7 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
         getMenuInflater().inflate(R.menu.toolbar_menu, menu);
         MenuItem menuItem = menu.findItem(R.id.action_search);
         SearchView searchView = (SearchView) menuItem.getActionView();
+
         searchView.setMaxWidth(Integer.MAX_VALUE);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener()
         {
