@@ -1,0 +1,126 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3     author : Ross Crawford
+4     matriculation no. : S1821950
+5     university : Glasgow Caledonian University
+6     module : Mobile Platform Development
+7-->
+8<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+9    package="com.rosscrawford.mpdtrafficscotland"
+10    android:versionCode="1"
+11    android:versionName="1.0" >
+12
+13    <uses-sdk
+14        android:minSdkVersion="26"
+14-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml
+15        android:targetSdkVersion="28" />
+15-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml
+16
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:12:5-67
+17-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:12:22-64
+18
+19    <!-- Include required permissions for Google Maps API to run. -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:23:5-79
+20-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:23:22-76
+21
+22    <uses-feature
+22-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:26:5-28:35
+23        android:glEsVersion="0x00020000"
+23-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:27:9-41
+24        android:required="true" />
+24-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:28:9-32
+25
+26    <application
+26-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:14:5-48:19
+27        android:name="com.rosscrawford.mpdtrafficscotland.TrafficApplication"
+27-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:15:9-43
+28        android:allowBackup="true"
+28-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:16:9-35
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.1.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\e9dab9c67c1ee3668e0bbf86c6d8cbd8\core-1.1.0\AndroidManifest.xml:24:18-86
+30        android:debuggable="true"
+31        android:fullBackupContent="true"
+31-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:21:9-41
+32        android:icon="@mipmap/ic_launcher"
+32-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:17:9-43
+33        android:label="@string/app_name"
+33-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:18:9-41
+34        android:roundIcon="@mipmap/ic_launcher_round"
+34-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:19:9-54
+35        android:supportsRtl="true"
+35-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:20:9-35
+36        android:theme="@style/AppTheme" >
+36-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:22:9-40
+37        <meta-data
+37-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:24:9-26:55
+38            android:name="com.google.android.geo.API_KEY"
+38-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:25:13-58
+39            android:value="@string/google_maps_key" />
+39-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:26:13-52
+40
+41        <activity android:name="com.rosscrawford.mpdtrafficscotland.MainActivity" >
+41-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:28:9-34:20
+41-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:28:19-47
+42            <intent-filter>
+42-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:29:13-33:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:30:17-69
+43-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:30:25-66
+44                <action android:name="android.intent.action.VIEW" />
+44-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:31:17-69
+44-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:31:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:32:17-77
+46-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:32:27-74
+47            </intent-filter>
+48        </activity>
+49        <activity android:name="com.rosscrawford.mpdtrafficscotland.ItemList" >
+49-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:36:9-40:20
+49-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:36:19-43
+50            <meta-data
+50-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:37:13-39:49
+51                android:name="android.support.PARENT_ACTIVITY"
+51-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:38:17-63
+52                android:value=".MainActivity" />
+52-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:39:17-46
+53        </activity>
+54        <activity android:name="com.rosscrawford.mpdtrafficscotland.ItemOverview" >
+54-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:42:9-46:20
+54-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:42:19-47
+55            <meta-data
+55-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:37:13-39:49
+56                android:name="android.support.PARENT_ACTIVITY"
+56-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:38:17-63
+57                android:value=".ItemList" />
+57-->F:\MPD\Projects\MPDTrafficScotland\app\src\main\AndroidManifest.xml:39:17-46
+58        </activity>
+59
+60        <!-- Needs to be explicitly declared on P+ -->
+61        <uses-library
+61-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:33:9-35:40
+62            android:name="org.apache.http.legacy"
+62-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:34:13-50
+63            android:required="false" />
+63-->[com.google.android.gms:play-services-maps:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\a3d702a77cbfacefb23de82416a0cb1f\play-services-maps-17.0.0\AndroidManifest.xml:35:13-37
+64
+65        <activity
+65-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+66            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+66-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+67            android:exported="false"
+67-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+68            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+68-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\77c2fc448e2bd0738fd67dce062b1efd\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+69
+70        <meta-data
+70-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\8c9b1051877c368e5576effe026e6c3b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+71            android:name="com.google.android.gms.version"
+71-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\8c9b1051877c368e5576effe026e6c3b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+72            android:value="@integer/google_play_services_version" />
+72-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\rcraw\.gradle\caches\transforms-2\files-2.1\8c9b1051877c368e5576effe026e6c3b\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+73    </application>
+74
+75</manifest>
