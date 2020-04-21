@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,8 +18,12 @@ import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * @author : Ross Crawford
@@ -132,17 +137,31 @@ public class ItemList extends AppCompatActivity implements ItemAdapter.ItemSelec
             DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
                 @Override
                 public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                    // this is where we would filter the recyclerview list to display a filtered result set based on the date input matching the Calendar dates
-                    // need to first store the date selected
-                    // then query against the list being shown
-                    // would need to determine if the selected date is greater than start date or less than end date
-                    // would need to disable this feature in the current incidents as no dates shown on there
-                    Toast.makeText(ItemList.this, dayOfMonth + "/" + month + "/" + year, Toast.LENGTH_SHORT).show();
+                    // add 1 to month as calendar uses indexes 0-11 for months
+                    String selectedDate = dayOfMonth + "/" + (month + 1) + "/" + year;
+                    Toast.makeText(ItemList.this, selectedDate, Toast.LENGTH_SHORT).show();
+                    Calendar newCalendar = formatDatePickerToCalendar(selectedDate);
+                    adapter.filterByCalendar(newCalendar);
                 }
             }, year, month, day);
             datePickerDialog.show();
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public Calendar formatDatePickerToCalendar(String input)
+    {
+        Calendar queryCalendar = Calendar.getInstance();
+        TimeZone tz = TimeZone.getTimeZone("GMT");
+        String pattern = "d/M/yyyy";
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern, Locale.ENGLISH);
+        try {
+            queryCalendar.setTime(simpleDateFormat.parse(input));
+            queryCalendar.setTimeZone(tz);
+        } catch (ParseException e) {
+            Log.d("Test", "Error converting date String to date Calendar");
+        }
+        return queryCalendar;
     }
 }

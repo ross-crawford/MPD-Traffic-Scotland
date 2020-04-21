@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -135,5 +136,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
                 notifyDataSetChanged();
             }
         };
+    }
+
+    public void filterByCalendar(Calendar query){
+        items = itemsFiltered;
+        ArrayList<Item> filteredItems = new ArrayList<>();
+        for (Item item : items) {
+            if (item.getStart().getTimeInMillis() < query.getTimeInMillis() && item.getEnd().getTimeInMillis() > query.getTimeInMillis())
+            {
+                filteredItems.add(item);
+            }
+        }
+        items = filteredItems;
+        notifyDataSetChanged();
     }
 }
